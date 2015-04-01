@@ -13,6 +13,10 @@
 		E515F05E1ACC0FE9003995EC /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E515F05D1ACC0FE9003995EC /* Images.xcassets */; };
 		E515F0611ACC0FE9003995EC /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = E515F05F1ACC0FE9003995EC /* LaunchScreen.xib */; };
 		E515F06D1ACC0FE9003995EC /* JGSwiftTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E515F06C1ACC0FE9003995EC /* JGSwiftTests.swift */; };
+		E515F0C71ACC12FD003995EC /* NetworkConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = E515F0C61ACC12FD003995EC /* NetworkConstants.swift */; };
+		E5C0FE461ACC18CD00B5A43E /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E515F0C11ACC11C8003995EC /* Alamofire.framework */; };
+		E5C0FE471ACC18CD00B5A43E /* Argo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E515F0C21ACC11C8003995EC /* Argo.framework */; };
+		E5C0FE481ACC18CD00B5A43E /* Runes.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E515F0C31ACC11C8003995EC /* Runes.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +40,10 @@
 		E515F0661ACC0FE9003995EC /* JGSwiftTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JGSwiftTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E515F06B1ACC0FE9003995EC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E515F06C1ACC0FE9003995EC /* JGSwiftTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JGSwiftTests.swift; sourceTree = "<group>"; };
+		E515F0C11ACC11C8003995EC /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Alamofire.framework; sourceTree = "<group>"; };
+		E515F0C21ACC11C8003995EC /* Argo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Argo.framework; sourceTree = "<group>"; };
+		E515F0C31ACC11C8003995EC /* Runes.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Runes.framework; sourceTree = "<group>"; };
+		E515F0C61ACC12FD003995EC /* NetworkConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkConstants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +51,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E5C0FE461ACC18CD00B5A43E /* Alamofire.framework in Frameworks */,
+				E5C0FE471ACC18CD00B5A43E /* Argo.framework in Frameworks */,
+				E5C0FE481ACC18CD00B5A43E /* Runes.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -60,6 +71,7 @@
 			isa = PBXGroup;
 			children = (
 				E515F0531ACC0FE9003995EC /* JGSwift */,
+				E515F0C01ACC11C8003995EC /* Carthage Dependencies */,
 				E515F0691ACC0FE9003995EC /* JGSwiftTests */,
 				E515F0521ACC0FE9003995EC /* Products */,
 			);
@@ -77,6 +89,7 @@
 		E515F0531ACC0FE9003995EC /* JGSwift */ = {
 			isa = PBXGroup;
 			children = (
+				E515F0C51ACC12EB003995EC /* Network */,
 				E515F0561ACC0FE9003995EC /* AppDelegate.swift */,
 				E515F0581ACC0FE9003995EC /* ViewController.swift */,
 				E515F05A1ACC0FE9003995EC /* Main.storyboard */,
@@ -112,6 +125,25 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		E515F0C01ACC11C8003995EC /* Carthage Dependencies */ = {
+			isa = PBXGroup;
+			children = (
+				E515F0C11ACC11C8003995EC /* Alamofire.framework */,
+				E515F0C21ACC11C8003995EC /* Argo.framework */,
+				E515F0C31ACC11C8003995EC /* Runes.framework */,
+			);
+			name = "Carthage Dependencies";
+			path = Carthage/Build/iOS;
+			sourceTree = "<group>";
+		};
+		E515F0C51ACC12EB003995EC /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				E515F0C61ACC12FD003995EC /* NetworkConstants.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -122,6 +154,7 @@
 				E515F04D1ACC0FE9003995EC /* Sources */,
 				E515F04E1ACC0FE9003995EC /* Frameworks */,
 				E515F04F1ACC0FE9003995EC /* Resources */,
+				E515F0C41ACC11FE003995EC /* Carthage Dependencies */,
 			);
 			buildRules = (
 			);
@@ -207,11 +240,32 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		E515F0C41ACC11FE003995EC /* Carthage Dependencies */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/Alamofire.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Argo.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Runes.framework",
+			);
+			name = "Carthage Dependencies";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		E515F04D1ACC0FE9003995EC /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E515F0C71ACC12FD003995EC /* NetworkConstants.swift in Sources */,
 				E515F0591ACC0FE9003995EC /* ViewController.swift in Sources */,
 				E515F0571ACC0FE9003995EC /* AppDelegate.swift in Sources */,
 			);
@@ -289,7 +343,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -325,7 +379,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
@@ -336,7 +390,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = JGSwift/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -346,7 +405,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = JGSwift/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -405,6 +469,7 @@
 				E515F0721ACC0FE9003995EC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		E515F0731ACC0FE9003995EC /* Build configuration list for PBXNativeTarget "JGSwiftTests" */ = {
 			isa = XCConfigurationList;
@@ -413,6 +478,7 @@
 				E515F0751ACC0FE9003995EC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -1,0 +1,3 @@
+github "Alamofire/Alamofire" "1.1.5"
+github "thoughtbot/runes" "v1.2.2"
+github "thoughtbot/Argo" "v0.4.3"
