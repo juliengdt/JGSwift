@@ -44,6 +44,7 @@
 		E515F0C21ACC11C8003995EC /* Argo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Argo.framework; sourceTree = "<group>"; };
 		E515F0C31ACC11C8003995EC /* Runes.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Runes.framework; sourceTree = "<group>"; };
 		E515F0C61ACC12FD003995EC /* NetworkConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkConstants.swift; sourceTree = "<group>"; };
+		E5C0FE4A1ACC352400B5A43E /* Cartfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Cartfile; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -128,6 +129,7 @@
 		E515F0C01ACC11C8003995EC /* Carthage Dependencies */ = {
 			isa = PBXGroup;
 			children = (
+				E5C0FE4A1ACC352400B5A43E /* Cartfile */,
 				E515F0C11ACC11C8003995EC /* Alamofire.framework */,
 				E515F0C21ACC11C8003995EC /* Argo.framework */,
 				E515F0C31ACC11C8003995EC /* Runes.framework */,
@@ -155,6 +157,7 @@
 				E515F04E1ACC0FE9003995EC /* Frameworks */,
 				E515F04F1ACC0FE9003995EC /* Resources */,
 				E515F0C41ACC11FE003995EC /* Carthage Dependencies */,
+				E5C0FE491ACC323C00B5A43E /* Jazzy Documentation */,
 			);
 			buildRules = (
 			);
@@ -257,6 +260,20 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "/usr/local/bin/carthage copy-frameworks";
+		};
+		E5C0FE491ACC323C00B5A43E /* Jazzy Documentation */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Jazzy Documentation";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = jazzy;
 		};
 /* End PBXShellScriptBuildPhase section */
 
