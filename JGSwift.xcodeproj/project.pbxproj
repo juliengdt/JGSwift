@@ -45,6 +45,8 @@
 		E515F0C31ACC11C8003995EC /* Runes.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Runes.framework; sourceTree = "<group>"; };
 		E515F0C61ACC12FD003995EC /* NetworkConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkConstants.swift; sourceTree = "<group>"; };
 		E5C0FE4A1ACC352400B5A43E /* Cartfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Cartfile; sourceTree = SOURCE_ROOT; };
+		E5C0FE4B1ACC3A3B00B5A43E /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE; sourceTree = SOURCE_ROOT; };
+		E5C0FE4C1ACC3A3B00B5A43E /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +106,8 @@
 		E515F0541ACC0FE9003995EC /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				E5C0FE4B1ACC3A3B00B5A43E /* LICENSE */,
+				E5C0FE4C1ACC3A3B00B5A43E /* README.md */,
 				E515F0551ACC0FE9003995EC /* Info.plist */,
 			);
 			name = "Supporting Files";
