@@ -1,0 +1,2 @@
+# JGSwift
+A Swift XCodeProject
